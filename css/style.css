@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    height: 100%; margin: 0; background-color: rgb(30, 60, 100); background-image: url('../images/elegant.jpg') ;
+}
+#fullbody {height: 100%}
+.row::after {
+    content: "";
+    clear: both; 
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+}
+[id*="loader"]{
+    display: none;
+}
+
+@font-face{
+    src: url('../fonts/AgendaBold.ttf');
+    font-family: 'Agenda Bold';
+}
+@font-face{
+    src: url('../fonts/AgendaMedium.ttf');
+    font-family: 'Agenda Medium';
+}
+@font-face{
+    src: url('../fonts/Academia.ttf');
+    font-family: 'Academia';
+}
+a {
+  color: #165db5;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #165db5;
+  text-decoration: underline;
+}
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+    
+.center {text-align: center;}
+.required {color: darkred;}
+h3 {color: lightgoldenrodyellow; text-shadow: 2px 1px rgb(30, 40, 70); }
+#Form-box-1 {display: block;}
+
+/* Safari loader */
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+/*for mobile devices only*/
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+    
+    .no-mobile {display: none;}
+    .tab-only {display: none;}
+    .desktop-only {display: none;}
+
+    .logo {width: 80%;}
+    .loader {
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 5px;
+    height: 5px;
+    padding: 2px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    }
+    [id*="Form-box-"] {
+        display: none; padding: 1%; font-size: 90%; margin-left: 5%;
+    }
+    #Form-box-3 {margin-left: 0;}
+    .back-button, [id*="continuebutton"] {
+        height: 2.5em; width: 10em; margin-top: 1em;
+    }
+    [id*="continuebutton"] {float: right;}
+    [id*="displayerror"] {color: red; font-size: 60%;}
+
+    td {padding: 0.5%;}
+    td.form-input {width: 64%;}
+    table {position: relative; left: 4%;}
+    input.form-input {width: 85%; height: 2em; border-radius: 0.5em;}
+    .final-box {padding: 0.5em; background-color: lightgoldenrodyellow; color: black; border: 3px solid rgb(110,110,110); border-radius: 0.8em; z-index: 8; position: fixed; top: 10%; left: 5%; width: 88%; height: 85%; font-size: 90%; text-align: center; overflow: auto;}
+    #backdrop {background-color: rgba(190,190,200,0.9); z-index: 7; width: 100%; height: 100%; position: absolute; display: none; }
+    #l_bigloader {position: absolute; top: 20%; left: 10%; height: 70%; width: 90%; background-color: ghostwhite; border: 3px solid darkgrey; z-index: 8; font-family: 'candara'; text-align: center; font-size: 80%; color: rgb(5, 10, 50); overflow: auto;}
+    #loading{margin-top: 0.3em;}
+    #bigloader {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    z-index: 9;
+    border: 25px solid lightgray;
+    border-radius: 50%;
+    border-top: 30px solid #3498db;
+    width: 150px;
+    height: 150px;
+    padding: 12px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    }
+    .header {border-bottom: 3.5px solid darkgray; background-color: ghostwhite; padding-top: 1%;}
+    #header-title {font-family: 'Agenda Bold'; font-size: 90%; color: rgb(5, 10, 80); margin-top: 20px;}
+    .s-header {font-size: 80%;}
+    .body {border-top: 1.5px solid rgb(50, 50, 50);}
+    #instruction_box {position: fixed; top: 10%; left: 5%; height: 85%; width: 88%; border: 3px groove darkgray; border-radius: 1em; padding: 0.5em; background-color: whitesmoke; background-image: url('../images/paper.jpg'); z-index: 8; overflow: auto;}
+    #instruction_header {font-size: 110%; color: rgb(135, 105, 40); font-weight: 600; text-shadow: 2px darkgray;}
+    #instruction_body {font-family: 'Lato', serif; font-size: 85%; padding-left: 0.2em;}
+    .big-next {width: 6em; height: 2em; float: right; margin-right: 0.5em; margin-bottom: 0.5em; padding: 0.1em; border-radius: 0.1em; background-color: rgb(30, 40, 70); color: white;
+        text-shadow: 1px 1px darkgray; font-size: 100%;}
+    #masthead {position: fixed; bottom: 0; left: 0; background-color: ghostwhite; padding: 0.2%; border: 1px solid lightgray; border-radius: 0 0.5em 0 0;}
+
+
+/*for tablets*/
+@media only screen and (min-width: 600px){
+    [class*="col-"] {
+        padding: 15px;
+    }
+    .col-t-1 {width: 8.33%;}
+    .col-t-2 {width: 16.66%;}
+    .col-t-3 {width: 25%;}
+    .col-t-4 {width: 33.33%;}
+    .col-t-5 {width: 41.66%;}
+    .col-t-6 {width: 50%;}
+    .col-t-7 {width: 58.33%;}
+    .col-t-8 {width: 66.66%;}
+    .col-t-9 {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
+
+    .no-mobile {display: block;}
+    .mobile-only {display: none;}
+    .mobile-tab {display: block;}
+    .tab-only {display: block;}
+    .desktop-only {display: none;}
+
+}
+
+/*for desktops*/
+@media only screen and (min-width: 768px){
+    [class*="col-"] {
+        padding: 15px;
+    }
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    
+    .no-mobile {display: block;}
+    .mobile-only {display: none;}
+    .mobile-tab {display: none;}
+    .tab-only {display: none;}
+    .desktop-only {display: block;}
+
+    [id*="Form-box-"] {
+        font-size: 130%; margin-left: 0;
+    }
+    .back-button, [id*="continuebutton"] {
+        height: 2.5em; width: 10em; margin-top: 1em;
+    }
+    [id*="continuebutton"] {float: right;}
+    [id*="displayerror"] {color: red; font-size: 60%;}
+
+    table {left: 10%;}
+    h3 {color: lightgoldenrodyellow; text-shadow: 2px 1px rgb(30, 40, 70); }
+    td {padding: 1%;}
+    td.form-input {width: 75%;}
+    #Form-box-1 {display: block;}
+    input.form-input {width: 82%; height: 3em; border-radius: 0.5em;}
+        
+    .logo {width: 100%;}
+    .loader {
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 5px;
+    height: 5px;
+    padding: 2px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    }
+    .final-box {padding: 0.5em;  border-radius: 0.8em; top: 20%; left: 24%; width: 50%; height: 55%; font-size: 120%;}
+    #l_bigloader { top: 25%; left: 35%; height: 50%; width: 35%; font-size: 150%;}
+    #loading{margin-top: 0.3em;}
+    #bigloader {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    z-index: 9;
+    border: 25px solid lightgray;
+    border-radius: 50%;
+    border-top: 30px solid #3498db;
+    width: 150px;
+    height: 150px;
+    padding: 12px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    }
+
+    #header-title {font-family: 'Agenda Bold'; font-size: 150%; color: rgb(5, 10, 80); margin-top: 20px;}
+    .body {border-top: 1.5px solid rgb(50, 50, 50);}
+    #instruction_box {padding: 1em;  left: 10%; height: 80%; width: 75%;}
+    #instruction_header {font-size: 230%;}
+    #instruction_body {font-size: 130%; padding-left: 0.2em;}
+    .big-next {width: 10em; height: 3em; margin-right: 1em; padding: 2%; font-size: 180%;}
+    #masthead {position: fixed; bottom: 0; left: 0; background-color: ghostwhite; padding: 0.2%; border: 1px solid lightgray; border-radius: 0 0.5em 0 0;}
+}
+
+/*for wide screens*/
+@media only screen and (orientation: landscape) {
+}
